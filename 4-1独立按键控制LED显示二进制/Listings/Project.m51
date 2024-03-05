@@ -1,0 +1,103 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    03/03/2024  11:40:07  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+D:\ZHULIBO\SOFTWARE\KEIL5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\Project PRINT (.\Listings\Project.m51) RAMSIZ
+>> E (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\ZHULIBO\SOFTWARE\KEIL5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     001DH     UNIT         ?PR?MAIN?MAIN
+            CODE    0020H     0019H     UNIT         ?PR?_DELAY?MAIN
+            CODE    0039H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Project (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  -----    -----
+  +--> ?PR?_DELAY?MAIN
+
+?PR?_DELAY?MAIN                0008H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Project (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  B:00B0H.1       PUBLIC        P3_1
+  C:0003H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  03/03/2024  11:40:07  PAGE 2
+
+
+  C:0020H         PUBLIC        _Delay
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        x
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:0009H         SYMBOL        j
+  -------         ENDDO         
+  C:0020H         LINE#         4
+  C:0020H         LINE#         5
+  C:0020H         LINE#         6
+  C:002AH         LINE#         9
+  C:002DH         LINE#         10
+  C:0030H         LINE#         12
+  C:0030H         LINE#         13
+  C:0033H         LINE#         14
+  C:0036H         LINE#         15
+  C:0038H         LINE#         17
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0005H         SYMBOL        LED_num
+  -------         ENDDO         
+  C:0003H         LINE#         20
+  C:0003H         LINE#         22
+  C:0005H         LINE#         24
+  C:0005H         LINE#         25
+  C:0008H         LINE#         26
+  C:0008H         LINE#         27
+  C:000FH         LINE#         28
+  C:0012H         LINE#         29
+  C:0019H         LINE#         32
+  C:001AH         LINE#         33
+  C:001EH         LINE#         36
+  C:001EH         LINE#         38
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+Program Size: data=11.0 xdata=0 code=69
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
